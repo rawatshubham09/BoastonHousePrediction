@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Boaston House Prediction</title>
+
+    <style>
+        .myBody {
+                    background-color : azure
+                  }
+
+        .myDiv {
+                  border: 5px outset red;
+                  background-color: lightblue;
+                  text-align: center;
+                }
+        .myHtag {
+
+                text-align : center;
+                color : green
+                }
+        .myH1Tag {
+                    height: 50px;
+                    text-align : center;
+                    color:red;
+                  }
+    </style>
+</head>
+<body class="myBody">
+    <br/>
+    <h1 class="myH1Tag">Boaston House Price Prediction</h1>
+    <br/><br/>
+    <h3 class="myHtag">Enter Following Information to Predict value:</h3>
+    <div class="myDiv">
+    <form method="POST" action="{{ url_for( 'form_page' ) }}">
+        <div>
+            <label for="CRIM">Crime Rate  </label><br>
+            <input type="str" id="CRIM" name="CRIM" placeholder="btw( 0 - 10 )"><br><br>
+
+            <label for="INDUS">Area of Non-Retail Business</label><br>
+            <input type="str" id="INDUS" name="INDUS"  placeholder=" in acers "><br><br>
+
+            <label for="NOX">Nitric Oxide Concentration </label><br>
+            <input type="str" id="NOX" name="NOX" placeholder=" parts per 10,000 btw (0-1) "><br><br>
+
+            <label for="RM">Rooms per Dwelling</label><br>
+            <input type="str" id="RM" name="RM" placeholder="no. of Room"><br><br>
+
+            <label for="AGE">AGE </label><br>
+            <input type="str" id="AGE" name="AGE" placeholder="Base yr 1940"><br><br>
+
+            <label for="TAX">Property Tax-Rate</label><br>
+            <input type="str" id="TAX" name="TAX" placeholder="per $10,000"><br><br>
+
+            <label for="PTRATIO">Public Teacher Ratio</label><br>
+            <input type="str" id="PTRATIO" name="PTRATIO" placeholder="Don't use '%' fill value(5-25)"><br><br>
+
+            <label for="LSTAT">Percentage of Lower Status Population</label><br>
+            <input type="str" id="LSTAT" name="LSTAT" placeholder="Don't use '%'"><br><br>
+
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    </div>
+</body>
+</html>
